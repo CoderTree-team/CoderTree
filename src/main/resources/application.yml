@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://fcstudev.com:3306/test_database?userUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: test
+    password: MyPass@123
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+config:
+  addMapping: '/**'
+  allowedOrigins: '*'
+  allowedMethods: PUT,POST,DELETE,OPTIONS,GET
+  allowedHeaders: header1,header2,header3
+  exposedHeaders: header1,header2
+  allowCredentials: false
+  maxAge: 3600
+mybatis:
+  type-aliases-package: com.code.server.entity
+  mapper-locations: classpath:static/mapper/*.xml
